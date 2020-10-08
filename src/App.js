@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Button from './Button';
+import './index.css';
 
 function App() {
   // ENTRADA, RODANDO, FIM
@@ -7,21 +9,29 @@ function App() {
   // palpites
   const [palpite, setPalpite] = useState(150);
   const [numPalpites, setNumPalpites] = useState(1);
-  const [rodada, setRodada] = useState(0);
 
   const [min, setMin] = useState(0);
   const [max, setMax] = useState(300);
 
+  // contagem de rodadas
+  const [rodada, setRodada] = useState(0);
+
   const iniciarJogo = () => {
     setEstado('RODANDO');
+    // 0 <> 300
     setPalpite(150);
     setMin(0);
     setMax(300);
+    // palpites que a máquina deu
     setNumPalpites(1);
   };
 
   if (estado === 'ENTRADA') {
-    return <button onClick={iniciarJogo}>Começar a Jogar!</button>;
+    return (
+      <div className='container'>
+        <Button onClick={iniciarJogo} texto={'Começar a Jogar!'} />
+      </div>
+    );
   }
 
   const menor = () => {
@@ -42,30 +52,30 @@ function App() {
     setEstado('FIM');
     setRodada(rodada + 1);
   };
+
   if (estado === 'FIM') {
     return (
-      <div>
-        <p>
+      <div className='container'>
+        <p className='negrito'>
           Acertei o número {palpite} com {numPalpites} chutes!
         </p>
         <p>
           Minha pontuação até agora: {rodada}{' '}
           {rodada === 1 ? 'acerto' : 'acertos'}
         </p>
-        <button onClick={iniciarJogo}>Iniciar novamente!</button>
+        <Button onClick={iniciarJogo} texto={'Iniciar novamente!'} />
       </div>
     );
   }
 
-  // 0 <> 300
-  // palpites que maquina deu
   return (
-    <div style={{ textAlign: 'center' }}>
-      <p>O seu número é {palpite}</p>
-      {/* <p>Min: {min} / Max: {max}</p> */}
-      <button onClick={menor}>É menor!</button>
-      <button onClick={acertou}>Acertou!</button>
-      <button onClick={maior}>É maior!</button>
+    <div className='container'>
+      <h3>O seu número é {palpite}</h3>
+      <div className='container'>
+        <Button onClick={menor} texto={'É menor!'} classe={'btn-menor'} />{' '}
+        <Button onClick={acertou} texto={'Acertou!'} classe={'btn'} />{' '}
+        <Button onClick={maior} texto={'É maior!'} classe={'btn-maior'} />
+      </div>
     </div>
   );
 }

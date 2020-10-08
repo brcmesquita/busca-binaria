@@ -1,0 +1,47 @@
+body {
+  font-family: Roboto;
+}
+
+h3 {
+  font-size: larger;
+}
+
+p {
+  font-size: larger;
+}
+
+.negrito {
+  font-weight: bold;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: chartreuse;
+  border: 0;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: gold;
+  color: crimson;
+}
+
+.btn-menor {
+  background-color: crimson;
+}
+
+.btn-maior {
+  background-color: mediumblue;
+}
