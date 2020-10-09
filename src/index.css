@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* corpo do documento */
 * {
   text-align: center;
@@ -5,6 +6,12 @@
 }
 
 /* texto */
+=======
+body {
+  font-family: Roboto;
+}
+
+>>>>>>> main
 h3 {
   font-size: larger;
 }
@@ -17,12 +24,29 @@ p {
   font-weight: bold;
 }
 
+<<<<<<< HEAD
 /* botões */
+=======
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+>>>>>>> main
 button {
   background-color: limegreen;
   border: 0;
   padding: 10px;
+<<<<<<< HEAD
   margin: 10px;
+=======
+>>>>>>> main
   color: white;
   border-radius: 5px;
 }
