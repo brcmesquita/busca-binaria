@@ -1,7 +1,10 @@
-body {
+/* corpo do documento */
+* {
+  text-align: center;
   font-family: Roboto;
 }
 
+/* texto */
 h3 {
   font-size: larger;
 }
@@ -14,21 +17,12 @@ p {
   font-weight: bold;
 }
 
-.container {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+/* botões */
 button {
   background-color: limegreen;
   border: 0;
   padding: 10px;
+  margin: 10px;
   color: white;
   border-radius: 5px;
 }
