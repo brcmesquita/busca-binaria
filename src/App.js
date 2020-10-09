@@ -9,6 +9,7 @@ function App() {
   // palpites
   const [palpite, setPalpite] = useState(150);
   const [numPalpites, setNumPalpites] = useState(1);
+  const [totalPalpites, setTotalPalpites] = useState(0);
 
   const [min, setMin] = useState(0);
   const [max, setMax] = useState(300);
@@ -36,6 +37,7 @@ function App() {
 
   const menor = () => {
     setNumPalpites(numPalpites + 1);
+    setTotalPalpites(totalPalpites + 1);
     setMax(palpite);
     const proxPalpite = parseInt((palpite - min) / 2) + min;
     setPalpite(proxPalpite);
@@ -43,6 +45,7 @@ function App() {
 
   const maior = () => {
     setNumPalpites(numPalpites + 1);
+    setTotalPalpites(totalPalpites + 1);
     setMin(palpite);
     const proxPalpite = parseInt((max - palpite) / 2) + palpite;
     setPalpite(proxPalpite);
@@ -63,10 +66,25 @@ function App() {
           Minha pontuação até agora: {rodada}{' '}
           {rodada === 1 ? 'acerto' : 'acertos'}
         </p>
+        <p>
+          Total de chutes: {totalPalpites}{' '}
+          {totalPalpites === 1 ? 'chute' : 'chutes'}
+        </p>
         <Button onClick={iniciarJogo} texto={'Iniciar novamente!'} />
       </div>
     );
   }
+
+  const mostrarPlacar = () => {
+    if (rodada > 0) {
+      return (
+        <p>
+          Minha pontuação até agora: {rodada}
+          {rodada === 1 ? ' acerto' : ' acertos'}
+        </p>
+      );
+    }
+  };
 
   return (
     <div className='container'>
@@ -76,6 +94,7 @@ function App() {
         <Button onClick={acertou} texto={'Acertou!'} classe={'btn'} />{' '}
         <Button onClick={maior} texto={'É maior!'} classe={'btn-maior'} />
       </div>
+      <div>{mostrarPlacar()}</div>
     </div>
   );
 }
