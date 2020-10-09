@@ -14,7 +14,7 @@ Jogo de Busca Binária, onde o computador "tenta" adivinhar qual número você p
 
 ### Como instalar
 
-````
+```
 # Faça o download
 
 # Baixe as dependências
@@ -23,4 +23,25 @@ yarn
 # Rode
 yarn start
 ```
-````
+
+### Notas das versões
+
+#### v0.5
+
+Nova feature que mostra o total da rodada enquanto joga.
+
+#### v0.4
+
+Adicionado folha de estilos ao projeto.
+
+#### v0.3
+
+Adição de componentizações no código-fonte.
+
+#### v0.2
+
+Nova opção que mostra a pontuação da rodada.
+
+#### v0.1
+
+Lançamento do jogo.
