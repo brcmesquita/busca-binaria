@@ -26,7 +26,6 @@ yarn start
 
 ### Notas das versões
 
-<<<<<<< HEAD
 #### v0.4
 
 - Nova feature que mostra o total da rodada enquanto joga.
@@ -44,24 +43,3 @@ yarn start
 #### v0.1
 
 - Lançamento do jogo.
-=======
-#### v0.5
-
-Nova feature que mostra o total da rodada enquanto joga.
-
-#### v0.4
-
-Adicionado folha de estilos ao projeto.
-
-#### v0.3
-
-Adição de componentizações no código-fonte.
-
-#### v0.2
-
-Nova opção que mostra a pontuação da rodada.
-
-#### v0.1
-
-Lançamento do jogo.
->>>>>>> main

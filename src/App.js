@@ -29,11 +29,7 @@ function App() {
 
   if (estado === 'ENTRADA') {
     return (
-<<<<<<< HEAD
       <div>
-=======
-      <div className='container'>
->>>>>>> main
         <Button onClick={iniciarJogo} texto={'Começar a Jogar!'} />
       </div>
     );
@@ -62,11 +58,7 @@ function App() {
 
   if (estado === 'FIM') {
     return (
-<<<<<<< HEAD
       <div>
-=======
-      <div className='container'>
->>>>>>> main
         <p className='negrito'>
           Acertei o número {palpite} com {numPalpites} chutes!
         </p>
@@ -95,19 +87,11 @@ function App() {
   };
 
   return (
-<<<<<<< HEAD
     <div>
       <h3>O seu número é {palpite}</h3>
       <div>
         <Button onClick={menor} texto={'É menor!'} classe={'btn-menor'} />
         <Button onClick={acertou} texto={'Acertou!'} classe={'btn'} />
-=======
-    <div className='container'>
-      <h3>O seu número é {palpite}</h3>
-      <div className='container'>
-        <Button onClick={menor} texto={'É menor!'} classe={'btn-menor'} />{' '}
-        <Button onClick={acertou} texto={'Acertou!'} classe={'btn'} />{' '}
->>>>>>> main
         <Button onClick={maior} texto={'É maior!'} classe={'btn-maior'} />
       </div>
       <div>{mostrarPlacar()}</div>
